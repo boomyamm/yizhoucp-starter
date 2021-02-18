@@ -1,1 +1,2 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.yizhoucp.starter.tinyid.autoconfigure.TinyidAutoConfigure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.yizhoucp.starter.tinyid.autoconfigure.YZTinyidAutoConfigure

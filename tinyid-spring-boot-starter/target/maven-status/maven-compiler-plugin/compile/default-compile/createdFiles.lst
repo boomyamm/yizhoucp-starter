@@ -1,3 +1,4 @@
-cn/yizhoucp/starter/tinyid/autoconfigure/TinyidAutoConfigure.class
-cn/yizhoucp/starter/tinyid/autoconfigure/TinyidGeneratorProperties.class
-cn/yizhoucp/starter/tinyid/autoconfigure/TinyidGenerator.class
+cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidGenerator.class
+cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidAutoConfigure.class
+cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidGeneratorJPA.class
+cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidGeneratorProperties.class

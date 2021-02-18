@@ -16,14 +16,16 @@ import javax.annotation.PostConstruct;
  * @date 2021/2/14
  **/
 @Configuration
-@ConditionalOnClass(TinyidGenerator.class)
-@EnableConfigurationProperties(TinyidGeneratorProperties.class)
-public class TinyidAutoConfigure {
+@ConditionalOnClass(YZTinyidGenerator.class)
+@EnableConfigurationProperties(YZTinyidGeneratorProperties.class)
+public class YZTinyidAutoConfigure {
 
-    private final TinyidGeneratorProperties properties;
-    public TinyidAutoConfigure(TinyidGeneratorProperties properties) {
+    private final YZTinyidGeneratorProperties properties;
+    public YZTinyidAutoConfigure(YZTinyidGeneratorProperties properties) {
         this.properties = properties;
     }
+
+    private volatile YZTinyidGenerator tinyidGenerator = null;
 
     @PostConstruct
     private void init(){
@@ -34,10 +36,20 @@ public class TinyidAutoConfigure {
     @Bean
     @ConditionalOnMissingBean
     @ConditionalOnProperty(prefix = "tinyid", name = "enabled", havingValue = "true", matchIfMissing = false)
-    TinyidGenerator getTinyidGenerator() {
-        System.out.println("============== TinyidAutoConfigure init Bean ===============");
-        System.out.println("token:" + properties.getToken() + ", server:" + properties.getServer() + ", readTimeout:" + properties.getReadTimeout() + ", connectTimeout:" + properties.getConnectTimeout() + ", enabled:" + properties.isEnabled());
-        return new TinyidGenerator(properties);
+    public YZTinyidGenerator getTinyidGenerator() {
+        if(tinyidGenerator == null){
+            synchronized (YZTinyidAutoConfigure.class){
+                if(tinyidGenerator != null){
+                    return tinyidGenerator;
+                }
+                System.out.println("============== YZTinyidAutoConfigure init Bean ===============");
+                System.out.println("token:" + properties.getToken() + ", server:" + properties.getServer() + ", readTimeout:" + properties.getReadTimeout() + ", connectTimeout:" + properties.getConnectTimeout() + ", enabled:" + properties.isEnabled());
+                tinyidGenerator =  new YZTinyidGenerator(properties);
+
+                YZTinyidGeneratorJPA.yzTinyidGenerator = tinyidGenerator;
+            }
+        }
+        return tinyidGenerator;
     }
 
 }

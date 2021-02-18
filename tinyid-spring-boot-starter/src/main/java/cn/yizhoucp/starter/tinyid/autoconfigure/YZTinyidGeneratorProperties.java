@@ -9,7 +9,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2021/2/14
  **/
 @ConfigurationProperties(prefix = "tinyid", ignoreUnknownFields = false)
-public class TinyidGeneratorProperties {
+public class YZTinyidGeneratorProperties {
     private boolean enabled;
     private String token;
     private String server;

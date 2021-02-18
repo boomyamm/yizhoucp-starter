@@ -1,10 +1,8 @@
 package cn.yizhoucp.starter.tinyid.autoconfigure;
 
 import com.xiaoju.uemc.tinyid.base.entity.YZTinyidConfigProperties;
-import com.xiaoju.uemc.tinyid.base.generator.IdGenerator;
 import com.xiaoju.uemc.tinyid.client.utils.YZTinyId;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,9 +11,9 @@ import java.util.List;
  * @description TODO
  * @date 2021/2/14
  **/
-public class TinyidGenerator {
+public class YZTinyidGenerator {
 
-    public TinyidGenerator(TinyidGeneratorProperties properties) {
+    public YZTinyidGenerator(YZTinyidGeneratorProperties properties) {
         YZTinyidConfigProperties tinyidConfigProperties = new YZTinyidConfigProperties();
         tinyidConfigProperties.setTinyIdToken(properties.getToken());
         tinyidConfigProperties.setTinyIdServer(properties.getServer());

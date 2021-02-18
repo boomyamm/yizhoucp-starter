@@ -1,3 +1,4 @@
-/Users/jiangshan/XY/dev/yizhoucp-starter/tinyid-spring-boot-starter/src/main/java/cn/yizhoucp/starter/tinyid/autoconfigure/TinyidGeneratorProperties.java
-/Users/jiangshan/XY/dev/yizhoucp-starter/tinyid-spring-boot-starter/src/main/java/cn/yizhoucp/starter/tinyid/autoconfigure/TinyidAutoConfigure.java
-/Users/jiangshan/XY/dev/yizhoucp-starter/tinyid-spring-boot-starter/src/main/java/cn/yizhoucp/starter/tinyid/autoconfigure/TinyidGenerator.java
+/Users/jiangshan/XY/dev/yizhoucp-starter/tinyid-spring-boot-starter/src/main/java/cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidGenerator.java
+/Users/jiangshan/XY/dev/yizhoucp-starter/tinyid-spring-boot-starter/src/main/java/cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidGeneratorJPA.java
+/Users/jiangshan/XY/dev/yizhoucp-starter/tinyid-spring-boot-starter/src/main/java/cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidGeneratorProperties.java
+/Users/jiangshan/XY/dev/yizhoucp-starter/tinyid-spring-boot-starter/src/main/java/cn/yizhoucp/starter/tinyid/autoconfigure/YZTinyidAutoConfigure.java
