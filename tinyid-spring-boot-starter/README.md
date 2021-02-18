@@ -2,8 +2,8 @@
 > 1. 降低类似功能每个微服务都写一份的维护成本
 > 2. 降低micro-service-core的复杂度, 减轻各微服务对其的依赖
 
-### [tinyid-spring-boot-starter](https://git.yizhoucp.cn/microservices/yizhoucp-starter/-/tree/master/tinyid-spring-boot-starter) 
-> [tinyid-spring-boot-starter](https://git.yizhoucp.cn/microservices/yizhoucp-starter/-/tree/master/tinyid-spring-boot-starter) 基于[Tinyid](https://git.yizhoucp.cn/microservices/tinyid/-/tree/dev) ([官方版本](https://github.com/didi/tinyid)) 分布式全局唯一ID生成器
+### [tinyid-spring-boot-starter](https://github.com/boomyamm/yizhoucp-starter/tree/master/tinyid-spring-boot-starter) 
+> [tinyid-spring-boot-starter](https://github.com/boomyamm/yizhoucp-starter/tree/master/tinyid-spring-boot-starter) 基于[Tinyid](https://github.com/didi/tinyid)) 分布式全局唯一ID生成器 
 #### 功能点
 1. 抽象为spring-boot-starter
 2. 提供 REST API / Java Client 两种调用方式
@@ -57,7 +57,6 @@
         }
     }
     ```
-6. 完整demo [DemoController.java](https://git.yizhoucp.cn/microservices/demo-services/-/tree/feature/20210214-test-starter/src/main/java/cn/yizhoucp/demo/api/project/web/rest/controller)
 
 ##### 支持JPA
 1. 操作同上, 1, 2, 3, 4
@@ -80,6 +79,5 @@
         private String password;
     }
     ```
-3. 完整单元测试demo [YZTinyidJpaDAOTest.java](https://git.yizhoucp.cn/microservices/demo-services/-/blob/feature/20210214-test-starter/src/test/java/cn/yizhoucp/demo/api/project/dal/jpa/dao/YZTinyidJpaDAOTest.java)
     
  
